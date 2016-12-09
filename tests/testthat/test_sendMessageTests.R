@@ -6,17 +6,18 @@ test_that('test_sendInterventorEMail_interventorAPIOperationReturningSuccessfull
   # build
   # operate
   sent <<- FALSE
+  subject <- 'theSubject'
   message <- 'theMessage'
   studyXSId <- 1
   probandXSID <- 2
   studyApiKey <- conf.test.interventor.studyAPIKey
   interventorUrl <- conf.test.interventor.url
 
-  sendRequestMock <- function(apiOperationAdr, message_content){
+  sendRequestMock <- function(apiOperationAdr, subject, message_content){
     sent <<- TRUE
     list(status_code = 200)
   }
-  result <- sendInterventorEMail_(message, studyXSId, probandXSID, studyApiKey, interventorUrl, sendRequestMock)
+  result <- sendInterventorEMail_(subject, message, studyXSId, probandXSID, studyApiKey, interventorUrl, sendRequestMock)
 
   # check
   expect_true(sent)
@@ -27,16 +28,17 @@ test_that('test_sendInterventorEMail_interventorAPIOperationThrowingAnException_
   # build
   # operate
   sent <<- FALSE
+  subject <- 'theSubject'
   message <- 'theMessage'
   studyXSId <- 1
   probandXSID <- 2
   studyApiKey <- conf.test.interventor.studyAPIKey
   interventorUrl <- conf.test.interventor.url
 
-  sendRequestMock <- function(apiOperationAdr, message_content){
+  sendRequestMock <- function(apiOperationAdr, subject, message_content){
     list(status_code = 404)
   }
-  result <- sendInterventorEMail_(message, studyXSId, probandXSID, studyApiKey, interventorUrl, sendRequestMock)
+  result <- sendInterventorEMail_(subject, message, studyXSId, probandXSID, studyApiKey, interventorUrl, sendRequestMock)
 
   # check
   expect_equal(result, 'error_sending')

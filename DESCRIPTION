@@ -11,5 +11,6 @@ Suggests: testthat
 Imports:
     logging,
     httr,
-    digest
+    digest,
+    jsonlite
 RoxygenNote: 5.0.1
