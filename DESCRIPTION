@@ -1,9 +1,16 @@
 Package: interventoRR2RESTAdapter
 Title: Library to export the functionality of the REST-API of the InterventoR server
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: person("Jürgen", "Stumpp", email = "Stumpp@movisens.com", role = c("aut", "cre"))
 Description: Currently a Prototype! Not all operations available!
 Depends:
     R (>= 3.2.0)
 License: LGPL
 LazyData: true
+Suggests: testthat
+Imports:
+    logging,
+    httr,
+    digest,
+    jsonlite
+RoxygenNote: 5.0.1

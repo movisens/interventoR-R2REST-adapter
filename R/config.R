@@ -1,4 +1,4 @@
-conf.studyAPIKey <- 'theStudyAPIKey'
-conf.alerts.interventorUrl <- 'https://interventor.movisens.com'
-conf.alerts.interventor_messagingAPI.sendMessagePath <- '/api/message/medicalAttendant/email'
-conf.alerts.debugging <- FALSE
+conf.test.interventor.studyAPIKey <- 'theStudyAPIKey'
+conf.test.interventor.url <- 'https://interventor.movisens.com'
+conf.interventor.messagingAPI.sendMessagePath <- '/api/message/medicalAttendant/email'
+conf.interventor.messagingAPI.debugging <- FALSE
