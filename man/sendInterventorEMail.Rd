@@ -4,10 +4,12 @@
 \alias{sendInterventorEMail}
 \title{Send a message to a proband's medical attendant via e-mail}
 \usage{
-sendInterventorEMail(message_content, studyXSId, probandXSID, studyApiKey,
-  interventorUrl)
+sendInterventorEMail(subject = "no_subject", message_content, studyXSId,
+  probandXSID, studyApiKey, interventorUrl)
 }
 \arguments{
+\item{subject}{the subject of the e-mail}
+
 \item{message_content}{the content of the e-mail}
 
 \item{studyXSId}{the xs-study id}

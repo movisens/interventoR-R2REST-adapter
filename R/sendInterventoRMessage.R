@@ -1,6 +1,7 @@
 #' @import httr
 #' @import logging
 #' @import digest
+#' @import jsonlite
 #'
 NULL
 
@@ -43,6 +44,7 @@ interventorMessengerAPIPath <- function(studyXSId, probandXSID, content, token, 
 
 #' Send a message to a proband's medical attendant via e-mail
 #'
+#' @param subject the subject of the e-mail
 #' @param message_content the content of the e-mail
 #' @param studyXSId the xs-study id
 #' @param probandXSID xs-proband id

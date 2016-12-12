@@ -3,4 +3,5 @@
 export(sendInterventorEMail)
 import(digest)
 import(httr)
+import(jsonlite)
 import(logging)
